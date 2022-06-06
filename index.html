@@ -12,7 +12,7 @@
       <h1>ScriptMonsters Battle</h1>
     </header>
     <section class="player-view-container">
-      <div class="player-container">
+      <div class="player-container player1View">
         <div class="h2-container">
           <h2>Como Jogar</h2>
         </div>
@@ -21,19 +21,20 @@
             <ul>
               <li>Escolha seu ScriptMonster</li>
               <li>
-                Cada ScriptMonster tem 3 habilidades
+                Cada ScriptMonster tem 4 habilidades
                 <ul>
                   <li>Mordida (ataque neutro)</li>
                   <li>Skill (ataque elemental)</li>
-                  <li>Curar (cura % de HP)</li>
+                  <li>Curar (cura HP)</li>
+                  <li>Esquivar (aumenta esquiva 50%)</li>
                 </ul>
               </li>
-              <li>Durante o jogo escolha uma das 3 ações</li>
+              <li>Durante o jogo escolha uma das 4 ações</li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="player-container">
+      <div class="player-container player2View">
         <div class="h2-container">
           <h2>Escolha seu ScriptMonter</h2>
         </div>
@@ -52,7 +53,12 @@
       </div>
     </section>
     <section class="player-play-container">
-      <button class="action-button">P1 Escolher</button>
+      <button class="action-button player1" onclick="escolherMonster1()">
+        P1 Escolher
+      </button>
+      <button class="action-button player2" onclick="escolherMonster2()">
+        P2 Escolher
+      </button>
     </section>
     <footer></footer>
     <script src="./assets/script/indexScript.js"></script>
