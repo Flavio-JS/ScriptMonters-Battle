@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-body: #3f3d47;
+  --background-top-bottom: #797979;
+  --background-player: rgb(45, 37, 53);
+  --border-color: #000;
+  --gray: #d9d9d9;
+}
+
+body {
+  font-family: "Courier Prime", "Courier New", Courier, monospace;
+
+  background-color: var(--background-body);
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  height: 100px;
+  background-color: var(--background-top-bottom);
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.player-view-container {
+  background-color: var(--background-body);
+}
+
+.player-container {
+  text-align: center;
+  background-color: var(--background-player);
+  height: 600px;
+  width: 600px;
+  margin: 15px 0 15px 0;
+  border: var(--border-color) 2px solid;
+  border-radius: 80px;
+}
+
+.h2-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  width: 100%;
+  height: 10%;
+}
+
+.h2-container h2::after {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  left: 25%;
+  height: 1px;
+  width: 300px;
+  background-color: var(--border-color);
+}
+
+.play-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+
+.monsters-banners {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 15px 0 15px 0;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.arrow.left {
+  opacity: 50%;
+}
+
+.monsters-img {
+  height: 300px;
+  width: 300px;
+  border: 2px var(--border-color) solid;
+  background-image: none;
+  border-radius: 20px;
+}
+
+.name-monster {
+  opacity: 50%;
+  font-size: 40px;
+  height: 40px;
+  width: 80%;
+  background-color: var(--gray);
+  border-radius: 15px;
+}
+
+.main-info {
+  font-size: 30px;
+}
+
+.main-info ul {
+  list-style-position: inside;
+}
+
+.player-play-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 15px;
+}
+
+.player-play-container button {
+  border: var(--border-color) 2px solid;
+  border-radius: 15px;
+  padding: 5px;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Courier Prime", "Courier New", Courier, monospace;
+  font-size: 30px;
+  color: var(--gray);
+  background-color: var(--border-color);
+}
+
+.player-play-container button:hover {
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--background-top-bottom);
+}

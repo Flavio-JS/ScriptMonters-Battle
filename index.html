@@ -9,30 +9,50 @@
   </head>
   <body>
     <header>
-      <div><h1>ScriptMonsters Battle</h1></div>
+      <h1>ScriptMonsters Battle</h1>
     </header>
-    <section>
-      <div>
-        <h2>Como Jogar</h2>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat,
-          tempora provident nostrum autem itaque voluptatem beatae debitis
-          facere voluptatum quaerat nihil quam ex porro? Odio voluptate
-          perspiciatis ipsa veniam rerum.
-        </p>
-      </div>
-      <div>
-        <h2>Escolha seu ScriptMonter</h2>
-        <div>
-          <a href="#">esquerda</a>
-          <div>ScriptMonster</div>
-          <a href="#">direita</a>
+    <section class="player-view-container">
+      <div class="player-container">
+        <div class="h2-container">
+          <h2>Como Jogar</h2>
         </div>
-        <div>Nome ScriptMonter</div>
+        <div class="play-container">
+          <div class="main-info">
+            <ul>
+              <li>Escolha seu ScriptMonster</li>
+              <li>
+                Cada ScriptMonster tem 3 habilidades
+                <ul>
+                  <li>Mordida (ataque neutro)</li>
+                  <li>Skill (ataque elemental)</li>
+                  <li>Curar (cura % de HP)</li>
+                </ul>
+              </li>
+              <li>Durante o jogo escolha uma das 3 ações</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="player-container">
+        <div class="h2-container">
+          <h2>Escolha seu ScriptMonter</h2>
+        </div>
+        <div class="play-container">
+          <div class="monsters-banners">
+            <div class="arrow left" onclick="arrowLeft()">
+              <img src="./assets/img/Polygon left.svg" />
+            </div>
+            <div class="monsters-img"></div>
+            <div class="arrow right" onclick="arrowRight()">
+              <img src="./assets/img/Polygon right.svg" />
+            </div>
+          </div>
+          <div class="name-monster"></div>
+        </div>
       </div>
     </section>
-    <section>
-      <button>Começar</button>
+    <section class="player-play-container">
+      <button class="action-button">P1 Escolher</button>
     </section>
     <footer></footer>
     <script src="./assets/script/indexScript.js"></script>
