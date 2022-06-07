@@ -348,6 +348,7 @@ function morderPlayer1() {
     let esquivaInimigo = Math.floor(Math.random() * 100);
 
     if (esquivaInimigo <= player2.EsquivaChance) {
+      // verifica se o inimigo conseguiu esquivar
       dmgCausadoPeloP1HTML.innerHTML = `Turno ${turnoCount} Inimigo Esquivou`;
 
       dmgRecebidoPeloP2HTML.innerHTML = `Turno ${turnoCount} Você Esquivou`;
@@ -390,6 +391,7 @@ function morderPlayer1() {
       let chanceCritico = Math.floor(Math.random() * 100);
 
       if (chanceCritico <= player1.CritChance) {
+        //verifica se acertou critico
         alert(`Player1 acertou normal ATK crítico`);
         player2.HP = player2.HP - player1.NormalAtk * 1.5;
         dmgCausadoPeloP1HTML.innerHTML = `Turno ${turnoCount} Você causou ${
@@ -485,6 +487,7 @@ function skillPlayer1() {
     let esquivaInimigo = Math.floor(Math.random() * 100);
 
     if (esquivaInimigo <= player2.EsquivaChance) {
+      // verifica se o inimigo conseguiu esquivar
       dmgCausadoPeloP1HTML.innerHTML = `Turno ${turnoCount} Inimigo Esquivou`;
 
       dmgRecebidoPeloP2HTML.innerHTML = `Turno ${turnoCount} Você Esquivou`;
@@ -531,6 +534,7 @@ function skillPlayer1() {
       let chanceCritico = Math.floor(Math.random() * 100);
 
       if (chanceCritico <= player1.CritChance) {
+        //verifica se acertou critico
         alert(`Player1 acertou skill ATK crítico`);
         if (
           (player1.ID == "fire" && player2.ID == "ice") ||
@@ -539,7 +543,7 @@ function skillPlayer1() {
         ) {
           player2.HP =
             player2.HP - (player1.SkillAtk + player1.SkillAtk * 0.05) * 1.5;
-          dmgCausadoPeloP1HTML.innerHTML = `Você causou ${
+          dmgCausadoPeloP1HTML.innerHTML = `Turno ${turnoCount} Você causou ${
             (player1.SkillAtk + player1.SkillAtk * 0.05) * 1.5
           }dmg`;
           dmgRecebidoPeloP2HTML.innerHTML = `Você sofreu ${
@@ -574,7 +578,7 @@ function skillPlayer1() {
         ) {
           player2.HP =
             player2.HP - (player1.SkillAtk + player1.SkillAtk * 0.05);
-          dmgCausadoPeloP1HTML.innerHTML = `Você causou ${
+          dmgCausadoPeloP1HTML.innerHTML = `Turno ${turnoCount} Você causou ${
             player1.SkillAtk + player1.SkillAtk * 0.05
           }dmg`;
           dmgRecebidoPeloP2HTML.innerHTML = `Você sofreu ${
@@ -719,6 +723,7 @@ function morderPlayer2() {
     let esquivaInimigo = Math.floor(Math.random() * 100);
 
     if (esquivaInimigo <= player1.EsquivaChance) {
+      // verifica se o inimigo conseguiu esquivar
       dmgCausadoPeloP2HTML.innerHTML = `Turno ${turnoCount} Inimigo Esquivou`;
 
       dmgRecebidoPeloP1HTML.innerHTML = `Turno ${turnoCount} Você Esquivou`;
@@ -761,6 +766,7 @@ function morderPlayer2() {
       let chanceCritico = Math.floor(Math.random() * 100);
 
       if (chanceCritico <= player2.CritChance) {
+        //verifica se acertou critico
         alert(`Player1 acertou normal ATK crítico`);
         player1.HP = player1.HP - player2.NormalAtk * 1.5;
         dmgCausadoPeloP2HTML.innerHTML = `Turno ${turnoCount} Você causou ${
@@ -855,6 +861,7 @@ function skillPlayer2() {
     let esquivaInimigo = Math.floor(Math.random() * 100);
 
     if (esquivaInimigo <= player1.EsquivaChance) {
+      // verifica se o inimigo conseguiu esquivar
       dmgCausadoPeloP2HTML.innerHTML = `Turno ${turnoCount} Inimigo Esquivou`;
 
       dmgRecebidoPeloP1HTML.innerHTML = `Turno ${turnoCount} Você Esquivou`;
@@ -901,6 +908,7 @@ function skillPlayer2() {
       let chanceCritico = Math.floor(Math.random() * 100);
 
       if (chanceCritico <= player2.CritChance) {
+        //verifica se acertou critico
         alert(`Player2 acertou skill ATK crítico`);
 
         if (
