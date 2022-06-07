@@ -41,6 +41,8 @@ section {
 }
 
 .player-container {
+  display: flex;
+  justify-content: center;
   text-align: center;
   background-color: var(--background-player);
   height: 600px;
@@ -48,6 +50,78 @@ section {
   margin: 15px 0 15px 0;
   border: var(--border-color) 2px solid;
   border-radius: 80px;
+}
+
+.choice-layout-player1 {
+  display: inline;
+}
+.choice-layout-player2 {
+  display: inline;
+}
+.choice-layout-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.battle-layout-player1 {
+  display: none;
+  flex-direction: column;
+}
+.battle-layout-player2 {
+  display: none;
+  flex-direction: column;
+}
+.battle-layout-buttons {
+  display: none;
+  width: 100%;
+}
+
+.battle-layout-player2 .monsters-img,
+.battle-layout-player1 .monsters-img {
+  margin-top: 10px;
+}
+
+.status-container {
+  margin: 10px;
+  font-size: 30px;
+}
+
+.log-action-player1,
+.log-action-player2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-body);
+}
+
+.log-action-player1 div,
+.log-action-player2 div {
+  margin: 5px;
+  font-weight: bold;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.buttons-container-player1,
+.buttons-container-player2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.buttons-container-player1 button,
+.buttons-container-player2 button {
+  margin: 5px;
 }
 
 .h2-container {
@@ -58,16 +132,6 @@ section {
   font-size: 20px;
   width: 100%;
   height: 10%;
-}
-
-.h2-container h2::after {
-  content: "";
-  position: absolute;
-  bottom: 15px;
-  left: 25%;
-  height: 1px;
-  width: 300px;
-  background-color: var(--border-color);
 }
 
 .play-container {
@@ -89,6 +153,7 @@ section {
 
 .arrow {
   cursor: pointer;
+  margin: 10px;
 }
 
 .arrow.left {
@@ -123,7 +188,8 @@ section {
 .player-play-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   margin: 15px;
 }
 

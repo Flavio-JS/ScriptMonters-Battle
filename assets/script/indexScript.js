@@ -14,8 +14,6 @@ function arrowRight() {
     maxArrowClicks = 3;
   }
 
-  console.log(`maxArrowLeft ${maxArrowClicks}`);
-
   if (maxArrowClicks == 0) {
     //remove Monster
     document.querySelector(".name-monster").style.setProperty("opacity", "50%");
@@ -24,13 +22,13 @@ function arrowRight() {
       "<ul><li>Escolha seu ScriptMonster</li><li>Cada ScriptMonster tem 3 habilidades <br /><ul><li>Mordida (ataque neutro)</li><li>Skill (ataque elemental)</li><li>Curar (cura HP)</li><li>Esquivar (aumenta esquiva 50%)</li></ul></li><li>Durante o jogo escolha uma das 4 ações</li></ul>";
     document.querySelector(".h2-container").innerHTML = "<h2>Como Jogar</h2>";
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
   }
   if (maxArrowClicks == 1) {
@@ -39,13 +37,13 @@ function arrowRight() {
     document.querySelector(".main-info").innerHTML = //Fire Monster Stats
       "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 80HP</li><li>Forte Contra: ICE (Causa +5%DMG)</li><li>Fraco Contra: Aqua (Recebe +5%DMG)</li><li>Esquiva: 10% Chance de evitar DMG</li><li>Critico: 50% Chance de causar 1.5 do DMG</li></ul>";
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.setProperty(
         "background-image",
         "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
@@ -57,13 +55,13 @@ function arrowRight() {
     document.querySelector(".main-info").innerHTML = //Aqua Monster Stats
       "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 100HP</li><li>Forte Contra: FIRE (Causa +5%DMG)</li><li>Fraco Contra: ICE (Recebe +5%DMG)</li><li>Esquiva: 10% Chance de evitar DMG</li><li>Critico: 40% Chance de causar 1.5 do DMG</li></ul>";
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.setProperty(
         "background-image",
         "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
@@ -75,13 +73,13 @@ function arrowRight() {
     document.querySelector(".main-info").innerHTML = //Ice Monster Stats
       "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 80HP</li><li>Forte Contra: AQUA (Causa +5%DMG)</li><li>Fraco Contra: FIRE (Recebe +5%DMG)</li><li>Esquiva: 15% Chance de evitar DMG</li><li>Critico: 40% Chance de causar 1.5 do DMG</li></ul>";
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.setProperty(
         "background-image",
         "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
@@ -100,8 +98,6 @@ function arrowLeft() {
     maxArrowClicks = 0;
   }
 
-  console.log(`maxArrowLeft ${maxArrowClicks}`);
-
   if (maxArrowClicks == 0) {
     //remove Monster
     document.querySelector(".name-monster").style.setProperty("opacity", "50%");
@@ -110,13 +106,13 @@ function arrowLeft() {
       "<ul><li>Escolha seu ScriptMonster</li><li>Cada ScriptMonster tem 4 habilidades <br /><ul><li>Mordida (ataque neutro)</li><li>Skill (ataque elemental)</li><li>Curar (cura HP)</li><li>Esquivar (aumenta esquiva 50%)</li></ul></li><li>Durante o jogo escolha uma das 4 ações</li></ul>";
     document.querySelector(".h2-container").innerHTML = "<h2>Como Jogar</h2>";
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
   }
   if (maxArrowClicks == 1) {
@@ -125,13 +121,13 @@ function arrowLeft() {
     document.querySelector(".main-info").innerHTML = //Fire Monster Stats
       "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 80HP</li><li>Forte Contra: ICE (Causa +5%DMG)</li><li>Fraco Contra: Aqua (Recebe +5%DMG)</li><li>Esquiva: 10% Chance de evitar DMG</li><li>Critico: 50% Chance de causar 1.5 do DMG</li></ul>";
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.setProperty(
         "background-image",
         "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
@@ -143,13 +139,13 @@ function arrowLeft() {
     document.querySelector(".main-info").innerHTML = //Aqua Monster Stats
       "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 100HP</li><li>Forte Contra: FIRE (Causa +5%DMG)</li><li>Fraco Contra: ICE (Recebe +5%DMG)</li><li>Esquiva: 10% Chance de evitar DMG</li><li>Critico: 40% Chance de causar 1.5 do DMG</li></ul>";
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.setProperty(
         "background-image",
         "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
@@ -161,13 +157,13 @@ function arrowLeft() {
     document.querySelector(".main-info").innerHTML = //Ice Monster Stats
       "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 80HP</li><li>Forte Contra: AQUA (Causa +5%DMG)</li><li>Fraco Contra: FIRE (Recebe +5%DMG)</li><li>Esquiva: 15% Chance de evitar DMG</li><li>Critico: 40% Chance de causar 1.5 do DMG</li></ul>";
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
     document
-      .querySelector(".monsters-img")
+      .querySelector(".monsters-img.choice")
       .style.setProperty(
         "background-image",
         "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
@@ -235,18 +231,18 @@ function escolherMonster1() {
     return 0;
   }
   if (monsterID == fireMonsterStatus.ID) {
-    player1 = { fireMonsterStatus };
+    player1 = fireMonsterStatus;
     maxArrowClicks = 0;
     document.querySelector(".arrow.left").style.setProperty("opacity", "50%");
     arrowLeft();
   } else if (monsterID == aquaMonsterStatus.ID) {
     maxArrowClicks = 0;
-    player1 = { aquaMonsterStatus };
+    player1 = aquaMonsterStatus;
     document.querySelector(".arrow.left").style.setProperty("opacity", "50%");
     arrowLeft();
   } else if (monsterID == iceMonsterStatus.ID) {
     maxArrowClicks = 0;
-    player1 = { iceMonsterStatus };
+    player1 = iceMonsterStatus;
     document.querySelector(".arrow.left").style.setProperty("opacity", "50%");
     arrowLeft();
   }
@@ -271,34 +267,101 @@ function escolherMonster2() {
     return 0;
   }
   if (monsterID == fireMonsterStatus.ID) {
-    player2 = { fireMonsterStatus };
+    player2 = fireMonsterStatus;
     maxArrowClicks = 0;
     document.querySelector(".arrow.left").style.setProperty("opacity", "50%");
     arrowLeft();
   } else if (monsterID == aquaMonsterStatus.ID) {
     maxArrowClicks = 0;
-    player2 = { aquaMonsterStatus };
+    player2 = aquaMonsterStatus;
     document.querySelector(".arrow.left").style.setProperty("opacity", "50%");
     arrowLeft();
   } else if (monsterID == iceMonsterStatus.ID) {
     maxArrowClicks = 0;
-    player2 = { iceMonsterStatus };
+    player2 = iceMonsterStatus;
     document.querySelector(".arrow.left").style.setProperty("opacity", "50%");
     arrowLeft();
   }
 
+  console.log(`player1 ID: ${player1.ID}`);
+  console.log(`player2 ID: ${player2.ID}`);
+
   alert(`Monster Escolhido com sucesso ! Que vença o melhor ScriptMaster`);
 
+  document //removendo layout de escolha de script monster
+    .querySelector(".choice-layout-player1")
+    .style.setProperty("display", "none");
   document
-    .querySelector(".action-button.player1")
+    .querySelector(".choice-layout-player2")
+    .style.setProperty("display", "none");
+  document
+    .querySelector(".choice-layout-buttons")
     .style.setProperty("display", "none");
 
+  document //adicionando layout de batalha de script monster
+    .querySelector(".battle-layout-player1")
+    .style.setProperty("display", "flex");
   document
-    .querySelector(".action-button.player2")
-    .style.setProperty("display", "none");
+    .querySelector(".battle-layout-player2")
+    .style.setProperty("display", "flex");
+  document
+    .querySelector(".battle-layout-buttons")
+    .style.setProperty("display", "flex");
 
-  document.querySelector(".player1View").innerHTML = "";
-  document.querySelector(".player2View").innerHTML = "";
+  if (player1.ID == 1) {
+    document
+      .querySelector(".monster-face-player1")
+      .style.setProperty(
+        "background-image",
+        "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
+      );
+  } else if (player1.ID == 2) {
+    document
+      .querySelector(".monster-face-player1")
+      .style.setProperty(
+        "background-image",
+        "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
+      );
+  } else if (player1.ID == 3) {
+    document
+      .querySelector(".monster-face-player1")
+      .style.setProperty(
+        "background-image",
+        "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
+      );
+  }
 
-  //parei na parte de criar o layout de batalha
+  if (player2.ID == 1) {
+    document
+      .querySelector(".monster-face-player2")
+      .style.setProperty(
+        "background-image",
+        "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
+      );
+  } else if (player2.ID == 2) {
+    document
+      .querySelector(".monster-face-player2")
+      .style.setProperty(
+        "background-image",
+        "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
+      );
+  } else if (player2.ID == 3) {
+    document
+      .querySelector(".monster-face-player2")
+      .style.setProperty(
+        "background-image",
+        "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
+      );
+  }
+
+  alert(`Turno do Player1`);
 }
+
+//mecânica de batalha
+function Morder(player) {}
+
+function Skill(player) {}
+
+function Curar(player) {}
+
+function Esquivar(player) {}
