@@ -22,15 +22,14 @@
               <ul>
                 <li>Escolha seu ScriptMonster</li>
                 <li>
-                  Cada ScriptMonster tem 4 habilidades
+                  Cada ScriptMonster tem 3 habilidades
                   <ul>
                     <li>Mordida (ataque neutro)</li>
                     <li>Skill (ataque elemental)</li>
                     <li>Curar (cura HP)</li>
-                    <li>Esquivar (aumenta esquiva 50%)</li>
                   </ul>
                 </li>
-                <li>Durante o jogo escolha uma das 4 ações</li>
+                <li>Durante o jogo escolha uma das 3 ações</li>
               </ul>
             </div>
           </div>
@@ -40,7 +39,7 @@
           <div class="log-container">
             <div class="status-container">
               Player1
-              <div class="hp-player1">HP: 100%</div>
+              <div class="hp-player1">HP: 2000</div>
               <div class="stamina-player1">Stamina: 100%</div>
             </div>
             <div class="log-action-player1">
@@ -74,7 +73,7 @@
           <div class="log-container">
             <div class="status-container">
               Player2
-              <div class="hp-player2">HP: 100%</div>
+              <div class="hp-player2">HP: 2000</div>
               <div class="stamina-player2">Stamina: 100%</div>
             </div>
             <div class="log-action-player2">
@@ -99,37 +98,31 @@
         <div class="buttons-container">
           <div class="buttons-container-player1">
             <div class="buttons-container-player1-top">
-              <button class="action-button" onclick="Morder(player1)">
+              <button class="action-button" onclick="morderPlayer1(player1)">
                 Morder
               </button>
-              <button class="action-button" onclick="Skill(player1)">
+              <button class="action-button" onclick="skillPlayer1(player1)">
                 Skill
               </button>
             </div>
             <div lass="buttons-container-player1-bottom">
-              <button class="action-button" onclick="Curar(player1)">
+              <button class="action-button" onclick="curarPlayer1(player1)">
                 Curar
-              </button>
-              <button class="action-button" onclick="Esquivar(player1)">
-                Esquivar
               </button>
             </div>
           </div>
           <div class="buttons-container-player2">
             <div class="buttons-container-player2-top">
-              <button class="action-button" onclick="Morder(player2)">
-                Morder
+              <button class="action-button" onclick="morderPlayer2(player2)">
+                Morder2
               </button>
-              <button class="action-button" onclick="Skill(player2)">
+              <button class="action-button" onclick="skillPlayer2(player2)">
                 Skill
               </button>
             </div>
             <div lass="buttons-container-player2-top-bottom">
-              <button class="action-button" onclick="Curar(player2)">
+              <button class="action-button" onclick="curarPlayer2(player2)">
                 Curar
-              </button>
-              <button class="action-button" onclick="Esquivar(player2)">
-                Esquivar
               </button>
             </div>
           </div>

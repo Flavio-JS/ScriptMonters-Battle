@@ -19,7 +19,7 @@ function arrowRight() {
     document.querySelector(".name-monster").style.setProperty("opacity", "50%");
     document.querySelector(".name-monster").innerHTML = "";
     document.querySelector(".main-info").innerHTML = //como jogar
-      "<ul><li>Escolha seu ScriptMonster</li><li>Cada ScriptMonster tem 3 habilidades <br /><ul><li>Mordida (ataque neutro)</li><li>Skill (ataque elemental)</li><li>Curar (cura HP)</li><li>Esquivar (aumenta esquiva 50%)</li></ul></li><li>Durante o jogo escolha uma das 4 ações</li></ul>";
+      "<ul><li>Escolha seu ScriptMonster</li><li>Cada ScriptMonster tem 3 habilidades <br /><ul><li>Mordida (ataque neutro)</li><li>Skill (ataque elemental)</li><li>Curar (cura HP)</li></ul></li><li>Durante o jogo escolha uma das 3 ações</li></ul>";
     document.querySelector(".h2-container").innerHTML = "<h2>Como Jogar</h2>";
     document
       .querySelector(".monsters-img.choice")
@@ -35,7 +35,7 @@ function arrowRight() {
     //Exibe FireMonster
     document.querySelector(".name-monster").innerHTML = "FireMonster";
     document.querySelector(".main-info").innerHTML = //Fire Monster Stats
-      "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 80HP</li><li>Forte Contra: ICE (Causa +5%DMG)</li><li>Fraco Contra: Aqua (Recebe +5%DMG)</li><li>Esquiva: 10% Chance de evitar DMG</li><li>Critico: 50% Chance de causar 1.5 do DMG</li></ul>";
+      "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 80HP</li><li>Forte Contra: ICE (Causa +5%DMG)</li><li>Fraco Contra: Aqua (Recebe +5%DMG)</li><li>Esquiva: 15% Chance de evitar DMG</li><li>Critico: 50% Chance de causar 1.5 do DMG</li></ul>";
     document
       .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
@@ -53,7 +53,7 @@ function arrowRight() {
     //Exibe AquaMonster
     document.querySelector(".name-monster").innerHTML = "AquaMonster";
     document.querySelector(".main-info").innerHTML = //Aqua Monster Stats
-      "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 100HP</li><li>Forte Contra: FIRE (Causa +5%DMG)</li><li>Fraco Contra: ICE (Recebe +5%DMG)</li><li>Esquiva: 10% Chance de evitar DMG</li><li>Critico: 40% Chance de causar 1.5 do DMG</li></ul>";
+      "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 100HP</li><li>Forte Contra: FIRE (Causa +5%DMG)</li><li>Fraco Contra: ICE (Recebe +5%DMG)</li><li>Esquiva: 15% Chance de evitar DMG</li><li>Critico: 40% Chance de causar 1.5 do DMG</li></ul>";
     document
       .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
@@ -71,7 +71,7 @@ function arrowRight() {
     //Exibe IceMonster
     document.querySelector(".name-monster").innerHTML = "IceMonster";
     document.querySelector(".main-info").innerHTML = //Ice Monster Stats
-      "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 80HP</li><li>Forte Contra: AQUA (Causa +5%DMG)</li><li>Fraco Contra: FIRE (Recebe +5%DMG)</li><li>Esquiva: 15% Chance de evitar DMG</li><li>Critico: 40% Chance de causar 1.5 do DMG</li></ul>";
+      "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 80HP</li><li>Forte Contra: AQUA (Causa +5%DMG)</li><li>Fraco Contra: FIRE (Recebe +5%DMG)</li><li>Esquiva: 20% Chance de evitar DMG</li><li>Critico: 40% Chance de causar 1.5 do DMG</li></ul>";
     document
       .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
@@ -103,7 +103,7 @@ function arrowLeft() {
     document.querySelector(".name-monster").style.setProperty("opacity", "50%");
     document.querySelector(".name-monster").innerHTML = "";
     document.querySelector(".main-info").innerHTML = //como jogar
-      "<ul><li>Escolha seu ScriptMonster</li><li>Cada ScriptMonster tem 4 habilidades <br /><ul><li>Mordida (ataque neutro)</li><li>Skill (ataque elemental)</li><li>Curar (cura HP)</li><li>Esquivar (aumenta esquiva 50%)</li></ul></li><li>Durante o jogo escolha uma das 4 ações</li></ul>";
+      "<ul><li>Escolha seu ScriptMonster</li><li>Cada ScriptMonster tem 3 habilidades <br /><ul><li>Mordida (ataque neutro)</li><li>Skill (ataque elemental)</li><li>Curar (cura HP)</li></ul></li><li>Durante o jogo escolha uma das 3 ações</li></ul>";
     document.querySelector(".h2-container").innerHTML = "<h2>Como Jogar</h2>";
     document
       .querySelector(".monsters-img.choice")
@@ -119,7 +119,7 @@ function arrowLeft() {
     //Exibe FireMonster
     document.querySelector(".name-monster").innerHTML = "FireMonster";
     document.querySelector(".main-info").innerHTML = //Fire Monster Stats
-      "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 80HP</li><li>Forte Contra: ICE (Causa +5%DMG)</li><li>Fraco Contra: Aqua (Recebe +5%DMG)</li><li>Esquiva: 10% Chance de evitar DMG</li><li>Critico: 50% Chance de causar 1.5 do DMG</li></ul>";
+      "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 80HP</li><li>Forte Contra: ICE (Causa +5%DMG)</li><li>Fraco Contra: Aqua (Recebe +5%DMG)</li><li>Esquiva: 15% Chance de evitar DMG</li><li>Critico: 50% Chance de causar 1.5 do DMG</li></ul>";
     document
       .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
@@ -137,7 +137,7 @@ function arrowLeft() {
     //Exibe AquaMonster
     document.querySelector(".name-monster").innerHTML = "AquaMonster";
     document.querySelector(".main-info").innerHTML = //Aqua Monster Stats
-      "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 100HP</li><li>Forte Contra: FIRE (Causa +5%DMG)</li><li>Fraco Contra: ICE (Recebe +5%DMG)</li><li>Esquiva: 10% Chance de evitar DMG</li><li>Critico: 40% Chance de causar 1.5 do DMG</li></ul>";
+      "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 100HP</li><li>Forte Contra: FIRE (Causa +5%DMG)</li><li>Fraco Contra: ICE (Recebe +5%DMG)</li><li>Esquiva: 15% Chance de evitar DMG</li><li>Critico: 40% Chance de causar 1.5 do DMG</li></ul>";
     document
       .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
@@ -155,7 +155,7 @@ function arrowLeft() {
     //Exibe IceMonster
     document.querySelector(".name-monster").innerHTML = "IceMonster";
     document.querySelector(".main-info").innerHTML = //Ice Monster Stats
-      "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 80HP</li><li>Forte Contra: AQUA (Causa +5%DMG)</li><li>Fraco Contra: FIRE (Recebe +5%DMG)</li><li>Esquiva: 15% Chance de evitar DMG</li><li>Critico: 40% Chance de causar 1.5 do DMG</li></ul>";
+      "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 80HP</li><li>Forte Contra: AQUA (Causa +5%DMG)</li><li>Fraco Contra: FIRE (Recebe +5%DMG)</li><li>Esquiva: 20% Chance de evitar DMG</li><li>Critico: 40% Chance de causar 1.5 do DMG</li></ul>";
     document
       .querySelector(".monsters-img.choice")
       .style.removeProperty("background-image");
@@ -178,30 +178,33 @@ let monsterID = 0;
 let fireMonsterStatus = {
   ID: 1,
   HP: 2000,
+  Stamina: 0,
   SkillAtk: 200,
   NormalAtk: 100,
   Cura: 80,
-  EsquivaChance: 10,
+  EsquivaChance: 15,
   CritChance: 50,
 };
 
 let aquaMonsterStatus = {
   ID: 2,
   HP: 2000,
+  Stamina: 0,
   SkillAtk: 200,
   NormalAtk: 100,
   Cura: 100,
-  EsquivaChance: 10,
+  EsquivaChance: 15,
   CritChance: 40,
 };
 
 let iceMonsterStatus = {
   ID: 3,
   HP: 2000,
+  Stamina: 0,
   SkillAtk: 200,
   NormalAtk: 100,
   Cura: 80,
-  EsquivaChance: 15,
+  EsquivaChance: 20,
   CritChance: 40,
 };
 
@@ -283,8 +286,8 @@ function escolherMonster2() {
     arrowLeft();
   }
 
-  console.log(`player1 ID: ${player1.ID}`);
-  console.log(`player2 ID: ${player2.ID}`);
+  console.log(player1);
+  console.log(player2);
 
   alert(`Monster Escolhido com sucesso ! Que vença o melhor ScriptMaster`);
 
@@ -358,10 +361,243 @@ function escolherMonster2() {
 }
 
 //mecânica de batalha
-function Morder(player) {}
+let turnPlayer1 = true;
+let turnPlayer2 = false;
 
-function Skill(player) {}
+function morderPlayer1() {
+  if (turnPlayer1 == false) {
+    //não deixa jogar se não for o turno dele
+    alert(`Agora é a vez do Player2`);
+    return 0;
+  } else {
+    if (player1.ID == 1) {
+      //altera a face do monster
+      document
+        .querySelector(".monster-face-player1")
+        .style.setProperty(
+          "background-image",
+          "url(./assets/img/FireMonster/Fire-Monster-biting.png)"
+        );
+    } else if (player1.ID == 2) {
+      document
+        .querySelector(".monster-face-player1")
+        .style.setProperty(
+          "background-image",
+          "url(./assets/img/AquaMonster/Aqua-Monster-biting.png)"
+        );
+    } else {
+      document
+        .querySelector(".monster-face-player1")
+        .style.setProperty(
+          "background-image",
+          "url(./assets/img/IceMonster/Ice-Monster-biting.png)"
+        );
+    }
+    let esquivaInimigo = Math.floor(Math.random() * 100);
 
-function Curar(player) {}
+    if (esquivaInimigo <= player2.EsquivaChance) {
+      //por algum motivo o monster esquiva mas não executa esse if, tenho que descobrir o porque ainda
+      document.querySelector(
+        ".dmg-causado-player1"
+      ).innerHTML = `Inimigo Esquivou`;
 
-function Esquivar(player) {}
+      document.querySelector(
+        ".dmg-recebido-player2"
+      ).innerHTML = `Você Esquivou`;
+
+      if (player2.ID == 1) {
+        document
+          .querySelector(".monster-face-player2")
+          .style.setProperty(
+            "background-image",
+            "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
+          );
+      } else if (player2.ID == 2) {
+        document
+          .querySelector(".monster-face-player2")
+          .style.setProperty(
+            "background-image",
+            "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
+          );
+      } else {
+        document
+          .querySelector(".monster-face-player2")
+          .style.setProperty(
+            "background-image",
+            "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
+          );
+      }
+
+      alert(`Inimigo Esquivou`);
+    } else {
+      if (player2.ID == 1) {
+        document
+          .querySelector(".monster-face-player2")
+          .style.setProperty(
+            "background-image",
+            "url(./assets/img/FireMonster/Fire-Monster-take-damage.png)"
+          );
+      } else if (player2.ID == 2) {
+        document
+          .querySelector(".monster-face-player2")
+          .style.setProperty(
+            "background-image",
+            "url(./assets/img/AquaMonster/Aqua-Monster-take-damage.png)"
+          );
+      } else {
+        document
+          .querySelector(".monster-face-player2")
+          .style.setProperty(
+            "background-image",
+            "url(./assets/img/IceMonster/Ice-Monster-take-damage.png)"
+          );
+      }
+      let chanceCritico = Math.floor(Math.random() * 100);
+      alert("chanceCritifco: " + chanceCritico);
+
+      if (chanceCritico <= player1.CritChance) {
+        alert(`Player1 acertou normal ATK crítico`);
+        if (
+          (player1.ID == 1 && player2.ID == 3) ||
+          (player1.ID == 2 && player2.ID == 1) ||
+          (player1.ID == 3 && player2.ID == 2)
+        ) {
+          player2.HP =
+            player2.HP - (player1.NormalAtk + player1.NormalAtk * 0.05) * 1.5;
+          document.querySelector(
+            ".dmg-causado-playerl"
+          ).innerHTML = `Você causou ${
+            (player1.NormalAtk + player1.NormalAtk * 0.05) * 1.5
+          }dmg`;
+          document.querySelector(
+            ".dmg-recebido-player2"
+          ).innerHTML = `Você sofreu ${
+            (player1.NormalAtk + player1.NormalAtk * 0.05) * 1.5
+          }dmg`;
+          document.querySelector(".hp-player2").innerHTML = `HP: ${player2.HP}`;
+          if (player1.Stamina < 100) {
+            player1.Stamina = player1.Stamina + 50;
+          }
+          document.querySelector(
+            ".stamina-player1"
+          ).innerHTML = `Stamina: ${player1.Stamina}%`;
+          if (player2.HP <= 0) {
+            alert(`Player1 venceu`);
+          }
+        } else {
+          player2.HP = player2.HP - player1.NormalAtk * 1.5;
+          document.querySelector(
+            ".dmg-causado-playerl"
+          ).innerHTML = `Você causou ${player1.NormalAtk * 1.5}dmg`;
+          document.querySelector(".hp-player2").innerHTML = `HP: ${player2.HP}`;
+          document.querySelector(
+            ".dmg-recebido-player2"
+          ).innerHTML = `Você sofreu ${player1.NormalAtk * 1.5}dmg`;
+          if (player1.Stamina < 100) {
+            player1.Stamina = player1.Stamina + 50;
+          }
+          document.querySelector(
+            ".stamina-player1"
+          ).innerHTML = `Stamina: ${player1.Stamina}%`;
+          if (player2.HP <= 0) {
+            alert(`Player1 venceu`);
+          }
+        }
+      } else {
+        alert(`Player1 acertou normal ATK`);
+        if (
+          (player1.ID == 1 && player2.ID == 3) ||
+          (player1.ID == 2 && player2.ID == 1) ||
+          (player1.ID == 3 && player2.ID == 2)
+        ) {
+          player2.HP =
+            player2.HP - player1.NormalAtk + player1.NormalAtk * 0.05;
+          document.querySelector(
+            ".dmg-causado-playerl"
+          ).innerHTML = `Você causou ${
+            player1.NormalAtk + player1.NormalAtk * 0.05
+          }dmg`;
+          document.querySelector(
+            ".dmg-recebido-player2"
+          ).innerHTML = `Você sofreu ${
+            player1.NormalAtk + player1.NormalAtk * 0.05
+          }dmg`;
+          document.querySelector(".hp-player2").innerHTML = `HP: ${player2.HP}`;
+          if (player1.Stamina < 100) {
+            player1.Stamina = player1.Stamina + 50;
+          }
+          document.querySelector(
+            ".stamina-player1"
+          ).innerHTML = `Stamina: ${player1.Stamina}%`;
+          if (player2.HP <= 0) {
+            alert(`Player1 venceu`);
+          }
+        } else {
+          player2.HP = player2.HP - player1.NormalAtk;
+          document.querySelector(
+            ".dmg-causado-playerl"
+          ).innerHTML = `Você causou ${player1.NormalAtk}dmg`;
+          document.querySelector(
+            ".dmg-recebido-player2"
+          ).innerHTML = `Você sofreu ${player1.NormalAtk}dmg`;
+          document.querySelector(".hp-player2").innerHTML = `HP: ${player2.HP}`;
+          if (player1.Stamina < 100) {
+            player1.Stamina = player1.Stamina + 50;
+          }
+          document.querySelector(
+            ".stamina-player1"
+          ).innerHTML = `Stamina: ${player1.Stamina}%`;
+          if (player2.HP <= 0) {
+            alert(`Player1 venceu`);
+          }
+        }
+      }
+    }
+  }
+  turnPlayer1 == true;
+}
+
+function skillPlayer1() {
+  if (turnPlayer1 == false) {
+    alert(`Agora é a vez do Player2`);
+    return 0;
+  }
+  if (player.Stamina < 100) {
+    alert(
+      `É necessário 100% de Stamina para utilizar Skill, você tem ${player.Stamina}, ganhe stamina acertando ataques neutros !`
+    );
+  }
+}
+
+function curarPlayer1() {
+  if (turnPlayer1 == false) {
+    alert(`Agora é a vez do Player2`);
+    return 0;
+  }
+}
+
+function morderPlayer2() {
+  if (turnPlayer2 == false) {
+    alert(`Agora é a vez do Player1`);
+    return 0;
+  }
+}
+
+function skillPlayer2() {
+  if (turnPlayer2 == false) {
+    alert(`Agora é a vez do Player1`);
+    return 0;
+  }
+  if (player.Stamina < 100) {
+    alert(
+      `É necessário 100% de Stamina para utilizar Skill, você tem ${player.Stamina}, ganhe stamina acertando ataques neutros !`
+    );
+  }
+}
+
+function curarPlayer2() {
+  if (turnPlayer2 == false) {
+    alert(`Agora é a vez do Player1`);
+    return 0;
+  }
+}
