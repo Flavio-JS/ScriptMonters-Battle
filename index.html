@@ -40,7 +40,7 @@
             <div class="status-container">
               Player1
               <div class="hp-player1">HP: 2000</div>
-              <div class="stamina-player1">Stamina: 100%</div>
+              <div class="stamina-player1">Stamina: 0%</div>
             </div>
             <div class="log-action-player1">
               <div class="dmg-recebido-player1"></div>
@@ -74,7 +74,7 @@
             <div class="status-container">
               Player2
               <div class="hp-player2">HP: 2000</div>
-              <div class="stamina-player2">Stamina: 100%</div>
+              <div class="stamina-player2">Stamina: 0%</div>
             </div>
             <div class="log-action-player2">
               <div class="dmg-recebido-player2"></div>
@@ -98,35 +98,40 @@
         <div class="buttons-container">
           <div class="buttons-container-player1">
             <div class="buttons-container-player1-top">
-              <button class="action-button" onclick="morderPlayer1(player1)">
+              <button class="action-button" onclick="morderPlayer1()">
                 Morder
               </button>
-              <button class="action-button" onclick="skillPlayer1(player1)">
+              <button class="action-button" onclick="skillPlayer1()">
                 Skill
               </button>
             </div>
             <div lass="buttons-container-player1-bottom">
-              <button class="action-button" onclick="curarPlayer1(player1)">
+              <button class="action-button" onclick="curarPlayer1()">
                 Curar
               </button>
             </div>
           </div>
           <div class="buttons-container-player2">
             <div class="buttons-container-player2-top">
-              <button class="action-button" onclick="morderPlayer2(player2)">
-                Morder2
+              <button class="action-button" onclick="morderPlayer2()">
+                Morder
               </button>
-              <button class="action-button" onclick="skillPlayer2(player2)">
+              <button class="action-button" onclick="skillPlayer2()">
                 Skill
               </button>
             </div>
             <div lass="buttons-container-player2-top-bottom">
-              <button class="action-button" onclick="curarPlayer2(player2)">
+              <button class="action-button" onclick="curarPlayer2()">
                 Curar
               </button>
             </div>
           </div>
         </div>
+      </div>
+      <div class="end-layout-buttons">
+        <button class="action-button">
+          <a href="index.html">Jogar Novamente</a>
+        </button>
       </div>
     </section>
     <script src="./assets/script/indexScript.js"></script>

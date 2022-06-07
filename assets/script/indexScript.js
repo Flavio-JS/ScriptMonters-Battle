@@ -1,13 +1,21 @@
 /*Controle de escolha de ScriptMonsters*/
 let maxArrowClicks = 0;
+let arrowLeftHTML = document.querySelector(".arrow.left");
+let arrowRightHTML = document.querySelector(".arrow.right");
+let namemonsterHTML = document.querySelector(".name-monster");
+let h2ContainerHTML = document.querySelector(".h2-container");
+let mainInfoHTML = document.querySelector(".main-info");
+let monsterImgChoiceHTML = document.querySelector(".monsters-img.choice");
+let actionButtonP1HTML = document.querySelector(".action-button.player1");
+let actionButtonP2HTML = document.querySelector(".action-button.player2");
 
 function arrowRight() {
   maxArrowClicks++;
-  document.querySelector(".arrow.left").style.setProperty("opacity", "100%");
-  document.querySelector(".name-monster").style.setProperty("opacity", "100%");
-  document.querySelector(".h2-container").innerHTML = "<h2>STATUS</h2>";
+  arrowLeftHTML.style.setProperty("opacity", "100%");
+  namemonsterHTML.style.setProperty("opacity", "100%");
+  h2ContainerHTML.innerHTML = "<h2>STATUS</h2>";
   if (maxArrowClicks == 3) {
-    document.querySelector(".arrow.right").style.setProperty("opacity", "50%");
+    arrowRightHTML.style.setProperty("opacity", "50%");
   }
   if (maxArrowClicks == 4) {
     // Evitar que o usuário bugue o menu de  escolha
@@ -16,82 +24,58 @@ function arrowRight() {
 
   if (maxArrowClicks == 0) {
     //remove Monster
-    document.querySelector(".name-monster").style.setProperty("opacity", "50%");
-    document.querySelector(".name-monster").innerHTML = "";
-    document.querySelector(".main-info").innerHTML = //como jogar
+    namemonsterHTML.style.setProperty("opacity", "50%");
+    namemonsterHTML.innerHTML = "";
+    mainInfoHTML.innerHTML = //como jogar
       "<ul><li>Escolha seu ScriptMonster</li><li>Cada ScriptMonster tem 3 habilidades <br /><ul><li>Mordida (ataque neutro)</li><li>Skill (ataque elemental)</li><li>Curar (cura HP)</li></ul></li><li>Durante o jogo escolha uma das 3 ações</li></ul>";
-    document.querySelector(".h2-container").innerHTML = "<h2>Como Jogar</h2>";
-    document
-      .querySelector(".monsters-img.choice")
-      .style.removeProperty("background-image");
-    document
-      .querySelector(".monsters-img.choice")
-      .style.removeProperty("background-image");
-    document
-      .querySelector(".monsters-img.choice")
-      .style.removeProperty("background-image");
+    h2ContainerHTML.innerHTML = "<h2>Como Jogar</h2>";
+    monsterImgChoiceHTML.style.removeProperty("background-image");
+    monsterImgChoiceHTML.style.removeProperty("background-image");
+    monsterImgChoiceHTML.style.removeProperty("background-image");
   }
   if (maxArrowClicks == 1) {
     //Exibe FireMonster
-    document.querySelector(".name-monster").innerHTML = "FireMonster";
-    document.querySelector(".main-info").innerHTML = //Fire Monster Stats
+    namemonsterHTML.innerHTML = "FireMonster";
+    mainInfoHTML.innerHTML = //Fire Monster Stats
       "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 80HP</li><li>Forte Contra: ICE (Causa +5%DMG)</li><li>Fraco Contra: Aqua (Recebe +5%DMG)</li><li>Esquiva: 15% Chance de evitar DMG</li><li>Critico: 50% Chance de causar 1.5 do DMG</li></ul>";
-    document
-      .querySelector(".monsters-img.choice")
-      .style.removeProperty("background-image");
-    document
-      .querySelector(".monsters-img.choice")
-      .style.removeProperty("background-image");
-    document
-      .querySelector(".monsters-img.choice")
-      .style.setProperty(
-        "background-image",
-        "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
-      );
+    monsterImgChoiceHTML.style.removeProperty("background-image");
+    monsterImgChoiceHTML.style.removeProperty("background-image");
+    monsterImgChoiceHTML.style.setProperty(
+      "background-image",
+      "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
+    );
   }
   if (maxArrowClicks == 2) {
     //Exibe AquaMonster
-    document.querySelector(".name-monster").innerHTML = "AquaMonster";
-    document.querySelector(".main-info").innerHTML = //Aqua Monster Stats
+    namemonsterHTML.innerHTML = "AquaMonster";
+    mainInfoHTML.innerHTML = //Aqua Monster Stats
       "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 100HP</li><li>Forte Contra: FIRE (Causa +5%DMG)</li><li>Fraco Contra: ICE (Recebe +5%DMG)</li><li>Esquiva: 15% Chance de evitar DMG</li><li>Critico: 40% Chance de causar 1.5 do DMG</li></ul>";
-    document
-      .querySelector(".monsters-img.choice")
-      .style.removeProperty("background-image");
-    document
-      .querySelector(".monsters-img.choice")
-      .style.removeProperty("background-image");
-    document
-      .querySelector(".monsters-img.choice")
-      .style.setProperty(
-        "background-image",
-        "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
-      );
+    monsterImgChoiceHTML.style.removeProperty("background-image");
+    monsterImgChoiceHTML.style.removeProperty("background-image");
+    monsterImgChoiceHTML.style.setProperty(
+      "background-image",
+      "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
+    );
   }
   if (maxArrowClicks == 3) {
     //Exibe IceMonster
-    document.querySelector(".name-monster").innerHTML = "IceMonster";
-    document.querySelector(".main-info").innerHTML = //Ice Monster Stats
+    namemonsterHTML.innerHTML = "IceMonster";
+    mainInfoHTML.innerHTML = //Ice Monster Stats
       "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 80HP</li><li>Forte Contra: AQUA (Causa +5%DMG)</li><li>Fraco Contra: FIRE (Recebe +5%DMG)</li><li>Esquiva: 20% Chance de evitar DMG</li><li>Critico: 40% Chance de causar 1.5 do DMG</li></ul>";
-    document
-      .querySelector(".monsters-img.choice")
-      .style.removeProperty("background-image");
-    document
-      .querySelector(".monsters-img.choice")
-      .style.removeProperty("background-image");
-    document
-      .querySelector(".monsters-img.choice")
-      .style.setProperty(
-        "background-image",
-        "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
-      );
+    monsterImgChoiceHTML.style.removeProperty("background-image");
+    monsterImgChoiceHTML.style.removeProperty("background-image");
+    monsterImgChoiceHTML.style.setProperty(
+      "background-image",
+      "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
+    );
   }
 }
 
 function arrowLeft() {
   maxArrowClicks--;
-  document.querySelector(".arrow.right").style.setProperty("opacity", "100%");
+  arrowRightHTML.style.setProperty("opacity", "100%");
   if (maxArrowClicks == 0) {
-    document.querySelector(".arrow.left").style.setProperty("opacity", "50%");
+    arrowLeftHTML.style.setProperty("opacity", "50%");
   }
   if (maxArrowClicks == -1) {
     // Evitar que o usuário bugue o menu de  escolha
@@ -100,83 +84,61 @@ function arrowLeft() {
 
   if (maxArrowClicks == 0) {
     //remove Monster
-    document.querySelector(".name-monster").style.setProperty("opacity", "50%");
-    document.querySelector(".name-monster").innerHTML = "";
-    document.querySelector(".main-info").innerHTML = //como jogar
+    namemonsterHTML.style.setProperty("opacity", "50%");
+    namemonsterHTML.innerHTML = "";
+    mainInfoHTML.innerHTML = //como jogar
       "<ul><li>Escolha seu ScriptMonster</li><li>Cada ScriptMonster tem 3 habilidades <br /><ul><li>Mordida (ataque neutro)</li><li>Skill (ataque elemental)</li><li>Curar (cura HP)</li></ul></li><li>Durante o jogo escolha uma das 3 ações</li></ul>";
-    document.querySelector(".h2-container").innerHTML = "<h2>Como Jogar</h2>";
-    document
-      .querySelector(".monsters-img.choice")
-      .style.removeProperty("background-image");
-    document
-      .querySelector(".monsters-img.choice")
-      .style.removeProperty("background-image");
-    document
-      .querySelector(".monsters-img.choice")
-      .style.removeProperty("background-image");
+    h2ContainerHTML.innerHTML = "<h2>Como Jogar</h2>";
+    monsterImgChoiceHTML.style.removeProperty("background-image");
+    monsterImgChoiceHTML.style.removeProperty("background-image");
+    monsterImgChoiceHTML.style.removeProperty("background-image");
   }
   if (maxArrowClicks == 1) {
     //Exibe FireMonster
-    document.querySelector(".name-monster").innerHTML = "FireMonster";
-    document.querySelector(".main-info").innerHTML = //Fire Monster Stats
+    namemonsterHTML.innerHTML = "FireMonster";
+    mainInfoHTML.innerHTML = //Fire Monster Stats
       "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 80HP</li><li>Forte Contra: ICE (Causa +5%DMG)</li><li>Fraco Contra: Aqua (Recebe +5%DMG)</li><li>Esquiva: 15% Chance de evitar DMG</li><li>Critico: 50% Chance de causar 1.5 do DMG</li></ul>";
-    document
-      .querySelector(".monsters-img.choice")
-      .style.removeProperty("background-image");
-    document
-      .querySelector(".monsters-img.choice")
-      .style.removeProperty("background-image");
-    document
-      .querySelector(".monsters-img.choice")
-      .style.setProperty(
-        "background-image",
-        "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
-      );
+    monsterImgChoiceHTML.style.removeProperty("background-image");
+    monsterImgChoiceHTML.style.removeProperty("background-image");
+    monsterImgChoiceHTML.style.setProperty(
+      "background-image",
+      "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
+    );
   }
   if (maxArrowClicks == 2) {
     //Exibe AquaMonster
-    document.querySelector(".name-monster").innerHTML = "AquaMonster";
-    document.querySelector(".main-info").innerHTML = //Aqua Monster Stats
+    namemonsterHTML.innerHTML = "AquaMonster";
+    mainInfoHTML.innerHTML = //Aqua Monster Stats
       "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 100HP</li><li>Forte Contra: FIRE (Causa +5%DMG)</li><li>Fraco Contra: ICE (Recebe +5%DMG)</li><li>Esquiva: 15% Chance de evitar DMG</li><li>Critico: 40% Chance de causar 1.5 do DMG</li></ul>";
-    document
-      .querySelector(".monsters-img.choice")
-      .style.removeProperty("background-image");
-    document
-      .querySelector(".monsters-img.choice")
-      .style.removeProperty("background-image");
-    document
-      .querySelector(".monsters-img.choice")
-      .style.setProperty(
-        "background-image",
-        "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
-      );
+    monsterImgChoiceHTML.style.removeProperty("background-image");
+    monsterImgChoiceHTML.style.removeProperty("background-image");
+    monsterImgChoiceHTML.style.setProperty(
+      "background-image",
+      "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
+    );
   }
   if (maxArrowClicks == 3) {
     //Exibe IceMonster
-    document.querySelector(".name-monster").innerHTML = "IceMonster";
-    document.querySelector(".main-info").innerHTML = //Ice Monster Stats
+    namemonsterHTML.innerHTML = "IceMonster";
+    mainInfoHTML.innerHTML = //Ice Monster Stats
       "<ul><li>HP: 2000</li><li>Skill DMG: 200</li><li>Mordida DMG: 100</li><li>Cura: 80HP</li><li>Forte Contra: AQUA (Causa +5%DMG)</li><li>Fraco Contra: FIRE (Recebe +5%DMG)</li><li>Esquiva: 20% Chance de evitar DMG</li><li>Critico: 40% Chance de causar 1.5 do DMG</li></ul>";
-    document
-      .querySelector(".monsters-img.choice")
-      .style.removeProperty("background-image");
-    document
-      .querySelector(".monsters-img.choice")
-      .style.removeProperty("background-image");
-    document
-      .querySelector(".monsters-img.choice")
-      .style.setProperty(
-        "background-image",
-        "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
-      );
+    monsterImgChoiceHTML.style.removeProperty("background-image");
+    monsterImgChoiceHTML.style.removeProperty("background-image");
+    monsterImgChoiceHTML.style.setProperty(
+      "background-image",
+      "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
+    );
   }
 }
 
 //Definindo monster do Player
 
 let monsterID = 0;
+let monsterFaceP1 = document.querySelector(".monster-face-player1");
+let monsterFaceP2 = document.querySelector(".monster-face-player2");
 
 let fireMonsterStatus = {
-  ID: 1,
+  ID: "fire",
   HP: 2000,
   Stamina: 0,
   SkillAtk: 200,
@@ -187,7 +149,7 @@ let fireMonsterStatus = {
 };
 
 let aquaMonsterStatus = {
-  ID: 2,
+  ID: "aqua",
   HP: 2000,
   Stamina: 0,
   SkillAtk: 200,
@@ -198,7 +160,7 @@ let aquaMonsterStatus = {
 };
 
 let iceMonsterStatus = {
-  ID: 3,
+  ID: "ice",
   HP: 2000,
   Stamina: 0,
   SkillAtk: 200,
@@ -208,8 +170,8 @@ let iceMonsterStatus = {
   CritChance: 40,
 };
 
-var player1 = {
-  ID: 0,
+let player1 = {
+  ID: "",
   HP: 0,
   SkillAtk: 0,
   NormalAtk: 0,
@@ -217,8 +179,8 @@ var player1 = {
   EsquivaChance: 0,
   CritChance: 0,
 };
-var player2 = {
-  ID: 0,
+let player2 = {
+  ID: "",
   HP: 0,
   SkillAtk: 0,
   NormalAtk: 0,
@@ -233,20 +195,20 @@ function escolherMonster1() {
     alert("Escolha um script monster");
     return 0;
   }
-  if (monsterID == fireMonsterStatus.ID) {
-    player1 = fireMonsterStatus;
+  if (monsterID == 1) {
+    player1 = { ...fireMonsterStatus };
     maxArrowClicks = 0;
-    document.querySelector(".arrow.left").style.setProperty("opacity", "50%");
+    arrowLeftHTML.style.setProperty("opacity", "50%");
     arrowLeft();
-  } else if (monsterID == aquaMonsterStatus.ID) {
+  } else if (monsterID == 2) {
     maxArrowClicks = 0;
-    player1 = aquaMonsterStatus;
-    document.querySelector(".arrow.left").style.setProperty("opacity", "50%");
+    player1 = { ...aquaMonsterStatus };
+    arrowLeftHTML.style.setProperty("opacity", "50%");
     arrowLeft();
-  } else if (monsterID == iceMonsterStatus.ID) {
+  } else if (monsterID == 3) {
     maxArrowClicks = 0;
-    player1 = iceMonsterStatus;
-    document.querySelector(".arrow.left").style.setProperty("opacity", "50%");
+    player1 = { ...iceMonsterStatus };
+    arrowLeftHTML.style.setProperty("opacity", "50%");
     arrowLeft();
   }
 
@@ -254,13 +216,9 @@ function escolherMonster1() {
     `Monster Escolhido com sucesso ! Antes do Player2 Escolher o monster, clique em "OK" para que ele não veja o Monster esolhido`
   );
 
-  document
-    .querySelector(".action-button.player1")
-    .style.setProperty("display", "none");
+  actionButtonP1HTML.style.setProperty("display", "none");
 
-  document
-    .querySelector(".action-button.player2")
-    .style.setProperty("display", "inline");
+  actionButtonP2HTML.style.setProperty("display", "inline");
 }
 
 function escolherMonster2() {
@@ -269,20 +227,20 @@ function escolherMonster2() {
     alert("Escolha um script monster");
     return 0;
   }
-  if (monsterID == fireMonsterStatus.ID) {
-    player2 = fireMonsterStatus;
+  if (monsterID == 1) {
+    player2 = { ...fireMonsterStatus };
     maxArrowClicks = 0;
-    document.querySelector(".arrow.left").style.setProperty("opacity", "50%");
+    arrowLeftHTML.style.setProperty("opacity", "50%");
     arrowLeft();
-  } else if (monsterID == aquaMonsterStatus.ID) {
+  } else if (monsterID == 2) {
     maxArrowClicks = 0;
-    player2 = aquaMonsterStatus;
-    document.querySelector(".arrow.left").style.setProperty("opacity", "50%");
+    player2 = { ...aquaMonsterStatus };
+    arrowLeftHTML.style.setProperty("opacity", "50%");
     arrowLeft();
-  } else if (monsterID == iceMonsterStatus.ID) {
+  } else if (monsterID == 3) {
     maxArrowClicks = 0;
-    player2 = iceMonsterStatus;
-    document.querySelector(".arrow.left").style.setProperty("opacity", "50%");
+    player2 = { ...iceMonsterStatus };
+    arrowLeftHTML.style.setProperty("opacity", "50%");
     arrowLeft();
   }
 
@@ -311,50 +269,38 @@ function escolherMonster2() {
     .querySelector(".battle-layout-buttons")
     .style.setProperty("display", "flex");
 
-  if (player1.ID == 1) {
-    document
-      .querySelector(".monster-face-player1")
-      .style.setProperty(
-        "background-image",
-        "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
-      );
-  } else if (player1.ID == 2) {
-    document
-      .querySelector(".monster-face-player1")
-      .style.setProperty(
-        "background-image",
-        "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
-      );
-  } else if (player1.ID == 3) {
-    document
-      .querySelector(".monster-face-player1")
-      .style.setProperty(
-        "background-image",
-        "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
-      );
+  if (player1.ID == "fire") {
+    monsterFaceP1.style.setProperty(
+      "background-image",
+      "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
+    );
+  } else if (player1.ID == "aqua") {
+    monsterFaceP1.style.setProperty(
+      "background-image",
+      "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
+    );
+  } else if (player1.ID == "ice") {
+    monsterFaceP1.style.setProperty(
+      "background-image",
+      "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
+    );
   }
 
-  if (player2.ID == 1) {
-    document
-      .querySelector(".monster-face-player2")
-      .style.setProperty(
-        "background-image",
-        "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
-      );
-  } else if (player2.ID == 2) {
-    document
-      .querySelector(".monster-face-player2")
-      .style.setProperty(
-        "background-image",
-        "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
-      );
-  } else if (player2.ID == 3) {
-    document
-      .querySelector(".monster-face-player2")
-      .style.setProperty(
-        "background-image",
-        "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
-      );
+  if (player2.ID == "fire") {
+    monsterFaceP2.style.setProperty(
+      "background-image",
+      "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
+    );
+  } else if (player2.ID == "aqua") {
+    monsterFaceP2.style.setProperty(
+      "background-image",
+      "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
+    );
+  } else if (player2.ID == "ice") {
+    monsterFaceP2.style.setProperty(
+      "background-image",
+      "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
+    );
   }
 
   alert(`Turno do Player1`);
@@ -363,6 +309,18 @@ function escolherMonster2() {
 //mecânica de batalha
 let turnPlayer1 = true;
 let turnPlayer2 = false;
+let turnoCount = 1;
+
+let dmgCausadoPeloP1HTML = document.querySelector(".dmg-causado-playerl");
+let dmgCausadoPeloP2HTML = document.querySelector(".dmg-causado-player2");
+let dmgRecebidoPeloP1HTML = document.querySelector(".dmg-recebido-player1");
+let dmgRecebidoPeloP2HTML = document.querySelector(".dmg-recebido-player2");
+let curaP1HTML = document.querySelector(".cura-player1");
+let curaP2HTML = document.querySelector(".cura-player2");
+let hpPlayer1HTML = document.querySelector(".hp-player1");
+let hpPlayer2HTML = document.querySelector(".hp-player2");
+let staminaPlayer1HTML = document.querySelector(".stamina-player1");
+let staminaPlayer2HTML = document.querySelector(".stamina-player2");
 
 function morderPlayer1() {
   if (turnPlayer1 == false) {
@@ -370,203 +328,307 @@ function morderPlayer1() {
     alert(`Agora é a vez do Player2`);
     return 0;
   } else {
-    if (player1.ID == 1) {
+    if (player1.ID == "fire") {
       //altera a face do monster
-      document
-        .querySelector(".monster-face-player1")
-        .style.setProperty(
-          "background-image",
-          "url(./assets/img/FireMonster/Fire-Monster-biting.png)"
-        );
-    } else if (player1.ID == 2) {
-      document
-        .querySelector(".monster-face-player1")
-        .style.setProperty(
-          "background-image",
-          "url(./assets/img/AquaMonster/Aqua-Monster-biting.png)"
-        );
+      monsterFaceP1.style.setProperty(
+        "background-image",
+        "url(./assets/img/FireMonster/Fire-Monster-biting.png)"
+      );
+    } else if (player1.ID == "aqua") {
+      monsterFaceP1.style.setProperty(
+        "background-image",
+        "url(./assets/img/AquaMonster/Aqua-Monster-biting.png)"
+      );
     } else {
-      document
-        .querySelector(".monster-face-player1")
-        .style.setProperty(
-          "background-image",
-          "url(./assets/img/IceMonster/Ice-Monster-biting.png)"
-        );
+      monsterFaceP1.style.setProperty(
+        "background-image",
+        "url(./assets/img/IceMonster/Ice-Monster-biting.png)"
+      );
     }
     let esquivaInimigo = Math.floor(Math.random() * 100);
 
     if (esquivaInimigo <= player2.EsquivaChance) {
-      //por algum motivo o monster esquiva mas não executa esse if, tenho que descobrir o porque ainda
-      document.querySelector(
-        ".dmg-causado-player1"
-      ).innerHTML = `Inimigo Esquivou`;
+      dmgCausadoPeloP1HTML.innerHTML = `Turno ${turnoCount} Inimigo Esquivou`;
 
-      document.querySelector(
-        ".dmg-recebido-player2"
-      ).innerHTML = `Você Esquivou`;
+      dmgRecebidoPeloP2HTML.innerHTML = `Turno ${turnoCount} Você Esquivou`;
 
-      if (player2.ID == 1) {
-        document
-          .querySelector(".monster-face-player2")
-          .style.setProperty(
-            "background-image",
-            "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
-          );
-      } else if (player2.ID == 2) {
-        document
-          .querySelector(".monster-face-player2")
-          .style.setProperty(
-            "background-image",
-            "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
-          );
+      if (player2.ID == "fire") {
+        monsterFaceP2.style.setProperty(
+          "background-image",
+          "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
+        );
+      } else if (player2.ID == "aqua") {
+        monsterFaceP2.style.setProperty(
+          "background-image",
+          "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
+        );
       } else {
-        document
-          .querySelector(".monster-face-player2")
-          .style.setProperty(
-            "background-image",
-            "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
-          );
+        monsterFaceP2.style.setProperty(
+          "background-image",
+          "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
+        );
       }
 
       alert(`Inimigo Esquivou`);
     } else {
-      if (player2.ID == 1) {
-        document
-          .querySelector(".monster-face-player2")
-          .style.setProperty(
-            "background-image",
-            "url(./assets/img/FireMonster/Fire-Monster-take-damage.png)"
-          );
-      } else if (player2.ID == 2) {
-        document
-          .querySelector(".monster-face-player2")
-          .style.setProperty(
-            "background-image",
-            "url(./assets/img/AquaMonster/Aqua-Monster-take-damage.png)"
-          );
+      if (player2.ID == "fire") {
+        monsterFaceP2.style.setProperty(
+          "background-image",
+          "url(./assets/img/FireMonster/Fire-Monster-take-damage.png)"
+        );
+      } else if (player2.ID == "aqua") {
+        monsterFaceP2.style.setProperty(
+          "background-image",
+          "url(./assets/img/AquaMonster/Aqua-Monster-take-damage.png)"
+        );
       } else {
-        document
-          .querySelector(".monster-face-player2")
-          .style.setProperty(
-            "background-image",
-            "url(./assets/img/IceMonster/Ice-Monster-take-damage.png)"
-          );
+        monsterFaceP2.style.setProperty(
+          "background-image",
+          "url(./assets/img/IceMonster/Ice-Monster-take-damage.png)"
+        );
       }
       let chanceCritico = Math.floor(Math.random() * 100);
-      alert("chanceCritifco: " + chanceCritico);
 
       if (chanceCritico <= player1.CritChance) {
         alert(`Player1 acertou normal ATK crítico`);
-        if (
-          (player1.ID == 1 && player2.ID == 3) ||
-          (player1.ID == 2 && player2.ID == 1) ||
-          (player1.ID == 3 && player2.ID == 2)
-        ) {
-          player2.HP =
-            player2.HP - (player1.NormalAtk + player1.NormalAtk * 0.05) * 1.5;
-          document.querySelector(
-            ".dmg-causado-playerl"
-          ).innerHTML = `Você causou ${
-            (player1.NormalAtk + player1.NormalAtk * 0.05) * 1.5
-          }dmg`;
-          document.querySelector(
-            ".dmg-recebido-player2"
-          ).innerHTML = `Você sofreu ${
-            (player1.NormalAtk + player1.NormalAtk * 0.05) * 1.5
-          }dmg`;
-          document.querySelector(".hp-player2").innerHTML = `HP: ${player2.HP}`;
-          if (player1.Stamina < 100) {
-            player1.Stamina = player1.Stamina + 50;
-          }
-          document.querySelector(
-            ".stamina-player1"
-          ).innerHTML = `Stamina: ${player1.Stamina}%`;
-          if (player2.HP <= 0) {
-            alert(`Player1 venceu`);
-          }
-        } else {
-          player2.HP = player2.HP - player1.NormalAtk * 1.5;
-          document.querySelector(
-            ".dmg-causado-playerl"
-          ).innerHTML = `Você causou ${player1.NormalAtk * 1.5}dmg`;
-          document.querySelector(".hp-player2").innerHTML = `HP: ${player2.HP}`;
-          document.querySelector(
-            ".dmg-recebido-player2"
-          ).innerHTML = `Você sofreu ${player1.NormalAtk * 1.5}dmg`;
-          if (player1.Stamina < 100) {
-            player1.Stamina = player1.Stamina + 50;
-          }
-          document.querySelector(
-            ".stamina-player1"
-          ).innerHTML = `Stamina: ${player1.Stamina}%`;
-          if (player2.HP <= 0) {
-            alert(`Player1 venceu`);
-          }
+        player2.HP = player2.HP - player1.NormalAtk * 1.5;
+        dmgCausadoPeloP1HTML.innerHTML = `Turno ${turnoCount} Você causou ${
+          player1.NormalAtk * 1.5
+        }dmg`;
+        hpPlayer2HTML.innerHTML = `HP: ${player2.HP}`;
+        dmgRecebidoPeloP2HTML.innerHTML = `Turno ${turnoCount} Você sofreu ${
+          player1.NormalAtk * 1.5
+        }dmg`;
+        if (player1.Stamina == 75) {
+          player1.Stamina = player1.Stamina + 25;
+        } else if (player1.Stamina < 100) {
+          player1.Stamina = player1.Stamina + 50;
         }
+        staminaPlayer1HTML.innerHTML = `Stamina: ${player1.Stamina}%`;
       } else {
         alert(`Player1 acertou normal ATK`);
-        if (
-          (player1.ID == 1 && player2.ID == 3) ||
-          (player1.ID == 2 && player2.ID == 1) ||
-          (player1.ID == 3 && player2.ID == 2)
-        ) {
-          player2.HP =
-            player2.HP - player1.NormalAtk + player1.NormalAtk * 0.05;
-          document.querySelector(
-            ".dmg-causado-playerl"
-          ).innerHTML = `Você causou ${
-            player1.NormalAtk + player1.NormalAtk * 0.05
-          }dmg`;
-          document.querySelector(
-            ".dmg-recebido-player2"
-          ).innerHTML = `Você sofreu ${
-            player1.NormalAtk + player1.NormalAtk * 0.05
-          }dmg`;
-          document.querySelector(".hp-player2").innerHTML = `HP: ${player2.HP}`;
-          if (player1.Stamina < 100) {
-            player1.Stamina = player1.Stamina + 50;
-          }
-          document.querySelector(
-            ".stamina-player1"
-          ).innerHTML = `Stamina: ${player1.Stamina}%`;
-          if (player2.HP <= 0) {
-            alert(`Player1 venceu`);
-          }
+        player2.HP = player2.HP - player1.NormalAtk;
+        dmgCausadoPeloP1HTML.innerHTML = `Turno ${turnoCount} Você causou ${player1.NormalAtk}dmg`;
+        dmgRecebidoPeloP2HTML.innerHTML = `Turno ${turnoCount} Você sofreu ${player1.NormalAtk}dmg`;
+        hpPlayer2HTML.innerHTML = `HP: ${player2.HP}`;
+        if (player1.Stamina == 75) {
+          player1.Stamina = player1.Stamina + 25;
+        } else if (player1.Stamina < 100) {
+          player1.Stamina = player1.Stamina + 50;
+        }
+        staminaPlayer1HTML.innerHTML = `Stamina: ${player1.Stamina}%`;
+      }
+      if (player2.HP <= 0) {
+        hpPlayer2HTML.innerHTML = `HP: 0`;
+
+        document
+          .querySelector(".battle-layout-buttons")
+          .style.setProperty("display", "none");
+        document
+          .querySelector(".end-layout-buttons")
+          .style.setProperty("display", "flex");
+
+        if (player2.ID == "fire") {
+          monsterFaceP2.style.setProperty(
+            "background-image",
+            "url(./assets/img/FireMonster/Fire-Monster-lost.png)"
+          );
+        } else if (player2.ID == "aqua") {
+          monsterFaceP2.style.setProperty(
+            "background-image",
+            "url(./assets/img/AquaMonster/Aqua-Monster-lost.png)"
+          );
         } else {
-          player2.HP = player2.HP - player1.NormalAtk;
-          document.querySelector(
-            ".dmg-causado-playerl"
-          ).innerHTML = `Você causou ${player1.NormalAtk}dmg`;
-          document.querySelector(
-            ".dmg-recebido-player2"
-          ).innerHTML = `Você sofreu ${player1.NormalAtk}dmg`;
-          document.querySelector(".hp-player2").innerHTML = `HP: ${player2.HP}`;
-          if (player1.Stamina < 100) {
-            player1.Stamina = player1.Stamina + 50;
-          }
-          document.querySelector(
-            ".stamina-player1"
-          ).innerHTML = `Stamina: ${player1.Stamina}%`;
-          if (player2.HP <= 0) {
-            alert(`Player1 venceu`);
-          }
+          monsterFaceP2.style.setProperty(
+            "background-image",
+            "url(./assets/img/IceMonster/Ice-Monster-lost.png)"
+          );
         }
       }
     }
   }
-  turnPlayer1 == true;
+
+  turnPlayer1 = false;
+  turnPlayer2 = true;
+  turnoCount++;
 }
 
 function skillPlayer1() {
   if (turnPlayer1 == false) {
+    //não deixa jogar se não for o turno dele
     alert(`Agora é a vez do Player2`);
     return 0;
   }
-  if (player.Stamina < 100) {
+  if (player1.Stamina < 100) {
     alert(
-      `É necessário 100% de Stamina para utilizar Skill, você tem ${player.Stamina}, ganhe stamina acertando ataques neutros !`
+      `É necessário 100% de Stamina para utilizar Skill, você tem ${player1.Stamina}, ganhe stamina acertando ataques neutros !`
     );
+    return 0;
+  } else {
+    if (player1.ID == "fire") {
+      //altera a face do monster
+      monsterFaceP1.style.setProperty(
+        "background-image",
+        "url(./assets/img/FireMonster/Fire-Monster-skill-to-right.png)"
+      );
+    } else if (player1.ID == "aqua") {
+      monsterFaceP1.style.setProperty(
+        "background-image",
+        "url(./assets/img/AquaMonster/Aqua-Monster-skill-to-right.png)"
+      );
+    } else {
+      monsterFaceP1.style.setProperty(
+        "background-image",
+        "url(./assets/img/IceMonster/Ice-Monster-skill-to-right.png)"
+      );
+    }
+    let esquivaInimigo = Math.floor(Math.random() * 100);
+
+    if (esquivaInimigo <= player2.EsquivaChance) {
+      dmgCausadoPeloP1HTML.innerHTML = `Turno ${turnoCount} Inimigo Esquivou`;
+
+      dmgRecebidoPeloP2HTML.innerHTML = `Turno ${turnoCount} Você Esquivou`;
+
+      if (player2.ID == "fire") {
+        monsterFaceP2.style.setProperty(
+          "background-image",
+          "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
+        );
+      } else if (player2.ID == "aqua") {
+        monsterFaceP2.style.setProperty(
+          "background-image",
+          "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
+        );
+      } else {
+        monsterFaceP2.style.setProperty(
+          "background-image",
+          "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
+        );
+      }
+
+      player1.Stamina = 0;
+
+      staminaPlayer1HTML.innerHTML = `Stamina: ${player1.Stamina}%`;
+
+      alert(`Inimigo Esquivou`);
+    } else {
+      if (player2.ID == "fire") {
+        monsterFaceP2.style.setProperty(
+          "background-image",
+          "url(./assets/img/FireMonster/Fire-Monster-take-damage.png)"
+        );
+      } else if (player2.ID == "aqua") {
+        monsterFaceP2.style.setProperty(
+          "background-image",
+          "url(./assets/img/AquaMonster/Aqua-Monster-take-damage.png)"
+        );
+      } else {
+        monsterFaceP2.style.setProperty(
+          "background-image",
+          "url(./assets/img/IceMonster/Ice-Monster-take-damage.png)"
+        );
+      }
+      let chanceCritico = Math.floor(Math.random() * 100);
+
+      if (chanceCritico <= player1.CritChance) {
+        alert(`Player1 acertou skill ATK crítico`);
+        if (
+          (player1.ID == "fire" && player2.ID == "ice") ||
+          (player1.ID == "aqua" && player2.ID == "fire") ||
+          (player1.ID == "ice" && player2.ID == "aqua")
+        ) {
+          player2.HP =
+            player2.HP - (player1.SkillAtk + player1.SkillAtk * 0.05) * 1.5;
+          dmgCausadoPeloP1HTML.innerHTML = `Você causou ${
+            (player1.SkillAtk + player1.SkillAtk * 0.05) * 1.5
+          }dmg`;
+          dmgRecebidoPeloP2HTML.innerHTML = `Você sofreu ${
+            (player1.SkillAtk + player1.SkillAtk * 0.05) * 1.5
+          }dmg`;
+          hpPlayer2HTML.innerHTML = `HP: ${player2.HP}`;
+
+          player1.Stamina = 0;
+
+          staminaPlayer1HTML.innerHTML = `Stamina: ${player1.Stamina}%`;
+        } else {
+          player2.HP = player2.HP - player1.SkillAtk * 1.5;
+          dmgCausadoPeloP1HTML.innerHTML = `Turno ${turnoCount} Você causou ${
+            player1.SkillAtk * 1.5
+          }dmg`;
+          hpPlayer2HTML.innerHTML = `HP: ${player2.HP}`;
+          dmgRecebidoPeloP2HTML.innerHTML = `Turno ${turnoCount} Você sofreu ${
+            player1.SkillAtk * 1.5
+          }dmg`;
+
+          player1.Stamina = 0;
+
+          staminaPlayer1HTML.innerHTML = `Stamina: ${player1.Stamina}%`;
+        }
+      } else {
+        alert(`Player1 acertou skill ATK`);
+
+        if (
+          (player1.ID == "fire" && player2.ID == "ice") ||
+          (player1.ID == "aqua" && player2.ID == "fire") ||
+          (player1.ID == "ice" && player2.ID == "aqua")
+        ) {
+          player2.HP =
+            player2.HP - (player1.SkillAtk + player1.SkillAtk * 0.05);
+          dmgCausadoPeloP1HTML.innerHTML = `Você causou ${
+            player1.SkillAtk + player1.SkillAtk * 0.05
+          }dmg`;
+          dmgRecebidoPeloP2HTML.innerHTML = `Você sofreu ${
+            player1.SkillAtk + player1.SkillAtk * 0.05
+          }dmg`;
+          hpPlayer2HTML.innerHTML = `HP: ${player2.HP}`;
+
+          player1.Stamina = 0;
+
+          staminaPlayer1HTML.innerHTML = `Stamina: ${player1.Stamina}%`;
+        } else {
+          player2.HP = player2.HP - player1.SkillAtk;
+          dmgCausadoPeloP1HTML.innerHTML = `Turno ${turnoCount} Você causou ${player1.SkillAtk}dmg`;
+          hpPlayer2HTML.innerHTML = `HP: ${player2.HP}`;
+          dmgRecebidoPeloP2HTML.innerHTML = `Turno ${turnoCount} Você sofreu ${player1.SkillAtk}dmg`;
+
+          player1.Stamina = 0;
+
+          staminaPlayer1HTML.innerHTML = `Stamina: ${player1.Stamina}%`;
+        }
+      }
+      if (player2.HP <= 0) {
+        hpPlayer2HTML.innerHTML = `HP: 0`;
+
+        document
+          .querySelector(".battle-layout-buttons")
+          .style.setProperty("display", "none");
+        document
+          .querySelector(".end-layout-buttons")
+          .style.setProperty("display", "flex");
+
+        if (player2.ID == "fire") {
+          monsterFaceP2.style.setProperty(
+            "background-image",
+            "url(./assets/img/FireMonster/Fire-Monster-lost.png)"
+          );
+        } else if (player2.ID == "aqua") {
+          monsterFaceP2.style.setProperty(
+            "background-image",
+            "url(./assets/img/AquaMonster/Aqua-Monster-lost.png)"
+          );
+        } else {
+          monsterFaceP2.style.setProperty(
+            "background-image",
+            "url(./assets/img/IceMonster/Ice-Monster-lost.png)"
+          );
+        }
+      }
+    }
   }
+
+  turnPlayer1 = false;
+  turnPlayer2 = true;
+  turnoCount++;
 }
 
 function curarPlayer1() {
@@ -574,30 +636,425 @@ function curarPlayer1() {
     alert(`Agora é a vez do Player2`);
     return 0;
   }
+  if (player1.Stamina < 25) {
+    alert(
+      `É necessário 25% de Stamina para utilizar Cura, você tem ${player1.Stamina}, ganhe stamina acertando ataques neutros !`
+    );
+    return 0;
+  } else {
+    if (player1.ID == "fire") {
+      //altera a face do monster
+      monsterFaceP1.style.setProperty(
+        "background-image",
+        "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
+      );
+    } else if (player1.ID == "aqua") {
+      monsterFaceP1.style.setProperty(
+        "background-image",
+        "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
+      );
+    } else {
+      monsterFaceP1.style.setProperty(
+        "background-image",
+        "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
+      );
+    }
+
+    if (player2.ID == "fire") {
+      monsterFaceP2.style.setProperty(
+        "background-image",
+        "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
+      );
+    } else if (player2.ID == "aqua") {
+      monsterFaceP2.style.setProperty(
+        "background-image",
+        "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
+      );
+    } else {
+      monsterFaceP2.style.setProperty(
+        "background-image",
+        "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
+      );
+    }
+
+    alert(`Player1 Curou ${player1.Cura}`);
+
+    player1.Stamina = player1.Stamina - 25;
+    staminaPlayer1HTML.innerHTML = `Stamina: ${player1.Stamina}%`;
+
+    curaP1HTML.innerHTML = `Turno ${turnoCount} Curou ${player1.Cura} de HP`;
+    curaP2HTML.innerHTML = `Turno ${turnoCount} Inimigo Curou ${player1.Cura} de HP`;
+    player1.HP = player1.HP + player1.Cura;
+    hpPlayer1HTML.innerHTML = `HP: ${player1.HP}`;
+
+    turnPlayer1 = false;
+    turnPlayer2 = true;
+    turnoCount++;
+  }
 }
 
 function morderPlayer2() {
   if (turnPlayer2 == false) {
+    //não deixa jogar se não for o turno dele
     alert(`Agora é a vez do Player1`);
     return 0;
+  } else {
+    if (player2.ID == "fire") {
+      //altera a face do monster
+      monsterFaceP2.style.setProperty(
+        "background-image",
+        "url(./assets/img/FireMonster/Fire-Monster-biting.png)"
+      );
+    } else if (player2.ID == "aqua") {
+      monsterFaceP2.style.setProperty(
+        "background-image",
+        "url(./assets/img/AquaMonster/Aqua-Monster-biting.png)"
+      );
+    } else {
+      monsterFaceP2.style.setProperty(
+        "background-image",
+        "url(./assets/img/IceMonster/Ice-Monster-biting.png)"
+      );
+    }
+    let esquivaInimigo = Math.floor(Math.random() * 100);
+
+    if (esquivaInimigo <= player1.EsquivaChance) {
+      dmgCausadoPeloP2HTML.innerHTML = `Turno ${turnoCount} Inimigo Esquivou`;
+
+      dmgRecebidoPeloP1HTML.innerHTML = `Turno ${turnoCount} Você Esquivou`;
+
+      if (player1.ID == "fire") {
+        monsterFaceP1.style.setProperty(
+          "background-image",
+          "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
+        );
+      } else if (player1.ID == "aqua") {
+        monsterFaceP1.style.setProperty(
+          "background-image",
+          "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
+        );
+      } else {
+        monsterFaceP1.style.setProperty(
+          "background-image",
+          "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
+        );
+      }
+
+      alert(`Inimigo Esquivou`);
+    } else {
+      if (player1.ID == "fire") {
+        monsterFaceP1.style.setProperty(
+          "background-image",
+          "url(./assets/img/FireMonster/Fire-Monster-take-damage.png)"
+        );
+      } else if (player1.ID == "aqua") {
+        monsterFaceP1.style.setProperty(
+          "background-image",
+          "url(./assets/img/AquaMonster/Aqua-Monster-take-damage.png)"
+        );
+      } else {
+        monsterFaceP1.style.setProperty(
+          "background-image",
+          "url(./assets/img/IceMonster/Ice-Monster-take-damage.png)"
+        );
+      }
+      let chanceCritico = Math.floor(Math.random() * 100);
+
+      if (chanceCritico <= player2.CritChance) {
+        alert(`Player1 acertou normal ATK crítico`);
+        player1.HP = player1.HP - player2.NormalAtk * 1.5;
+        dmgCausadoPeloP2HTML.innerHTML = `Turno ${turnoCount} Você causou ${
+          player2.NormalAtk * 1.5
+        }dmg`;
+        hpPlayer1HTML.innerHTML = `HP: ${player1.HP}`;
+        dmgRecebidoPeloP1HTML.innerHTML = `Turno ${turnoCount} Você sofreu ${
+          player2.NormalAtk * 1.5
+        }dmg`;
+        if (player2.Stamina == 75) {
+          player2.Stamina = player2.Stamina + 25;
+        } else if (player1.Stamina < 100) {
+          player2.Stamina = player2.Stamina + 50;
+        }
+        staminaPlayer2HTML.innerHTML = `Stamina: ${player2.Stamina}%`;
+      } else {
+        alert(`Player2 acertou normal ATK`);
+        player1.HP = player1.HP - player2.NormalAtk;
+        dmgCausadoPeloP2HTML.innerHTML = `Turno ${turnoCount} Você causou ${player2.NormalAtk}dmg`;
+        dmgRecebidoPeloP1HTML.innerHTML = `Turno ${turnoCount} Você sofreu ${player2.NormalAtk}dmg`;
+        hpPlayer1HTML.innerHTML = `HP: ${player1.HP}`;
+        if (player2.Stamina == 75) {
+          player2.Stamina = player2.Stamina + 25;
+        } else if (player2.Stamina < 100) {
+          player2.Stamina = player2.Stamina + 50;
+        }
+        staminaPlayer2HTML.innerHTML = `Stamina: ${player2.Stamina}%`;
+      }
+      if (player1.HP <= 0) {
+        hpPlayer1HTML.innerHTML = `HP: 0`;
+
+        document
+          .querySelector(".battle-layout-buttons")
+          .style.setProperty("display", "none");
+        document
+          .querySelector(".end-layout-buttons")
+          .style.setProperty("display", "flex");
+
+        if (player1.ID == "fire") {
+          monsterFaceP2.style.setProperty(
+            "background-image",
+            "url(./assets/img/FireMonster/Fire-Monster-lost.png)"
+          );
+        } else if (player1.ID == "aqua") {
+          monsterFaceP2.style.setProperty(
+            "background-image",
+            "url(./assets/img/AquaMonster/Aqua-Monster-lost.png)"
+          );
+        } else {
+          monsterFaceP1.style.setProperty(
+            "background-image",
+            "url(./assets/img/IceMonster/Ice-Monster-lost.png)"
+          );
+        }
+      }
+    }
   }
+  turnPlayer2 = false;
+  turnPlayer1 = true;
+  turnoCount++;
 }
 
 function skillPlayer2() {
   if (turnPlayer2 == false) {
+    //não deixa jogar se não for o turno dele
     alert(`Agora é a vez do Player1`);
     return 0;
   }
-  if (player.Stamina < 100) {
+  if (player2.Stamina < 100) {
     alert(
-      `É necessário 100% de Stamina para utilizar Skill, você tem ${player.Stamina}, ganhe stamina acertando ataques neutros !`
+      `É necessário 100% de Stamina para utilizar Skill, você tem ${player2.Stamina}, ganhe stamina acertando ataques neutros !`
     );
+    return 0;
+  } else {
+    if (player2.ID == "fire") {
+      //altera a face do monster
+      monsterFaceP2.style.setProperty(
+        "background-image",
+        "url(./assets/img/FireMonster/Fire-Monster-skill-to-left.png)"
+      );
+    } else if (player2.ID == "aqua") {
+      monsterFaceP2.style.setProperty(
+        "background-image",
+        "url(./assets/img/AquaMonster/Aqua-Monster-skill-to-left.png)"
+      );
+    } else {
+      monsterFaceP2.style.setProperty(
+        "background-image",
+        "url(./assets/img/IceMonster/Ice-Monster-skill-to-left.png)"
+      );
+    }
+    let esquivaInimigo = Math.floor(Math.random() * 100);
+
+    if (esquivaInimigo <= player1.EsquivaChance) {
+      dmgCausadoPeloP2HTML.innerHTML = `Turno ${turnoCount} Inimigo Esquivou`;
+
+      dmgRecebidoPeloP1HTML.innerHTML = `Turno ${turnoCount} Você Esquivou`;
+
+      if (player1.ID == "fire") {
+        monsterFaceP1.style.setProperty(
+          "background-image",
+          "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
+        );
+      } else if (player1.ID == "aqua") {
+        monsterFaceP1.style.setProperty(
+          "background-image",
+          "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
+        );
+      } else {
+        monsterFaceP1.style.setProperty(
+          "background-image",
+          "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
+        );
+      }
+
+      player2.Stamina = 0;
+
+      staminaPlayer2HTML.innerHTML = `Stamina: ${player2.Stamina}%`;
+
+      alert(`Inimigo Esquivou`);
+    } else {
+      if (player1.ID == "fire") {
+        monsterFaceP1.style.setProperty(
+          "background-image",
+          "url(./assets/img/FireMonster/Fire-Monster-take-damage.png)"
+        );
+      } else if (player1.ID == "aqua") {
+        monsterFaceP1.style.setProperty(
+          "background-image",
+          "url(./assets/img/AquaMonster/Aqua-Monster-take-damage.png)"
+        );
+      } else {
+        monsterFaceP1.style.setProperty(
+          "background-image",
+          "url(./assets/img/IceMonster/Ice-Monster-take-damage.png)"
+        );
+      }
+      let chanceCritico = Math.floor(Math.random() * 100);
+
+      if (chanceCritico <= player2.CritChance) {
+        alert(`Player2 acertou skill ATK crítico`);
+
+        if (
+          (player2.ID == "fire" && player1.ID == "ice") ||
+          (player2.ID == "aqua" && player1.ID == "fire") ||
+          (player2.ID == "ice" && player1.ID == "aqua")
+        ) {
+          player1.HP =
+            player1.HP - (player2.SkillAtk + player2.SkillAtk * 0.05) * 1.5;
+          dmgCausadoPeloP2HTML.innerHTML = `Turno ${turnoCount} Você causou ${
+            (player2.SkillAtk + player2.SkillAtk * 0.05) * 1.5
+          }dmg`;
+          dmgRecebidoPeloP1HTML.innerHTML = `Turno ${turnoCount} Você sofreu ${
+            (player2.SkillAtk + player2.SkillAtk * 0.05) * 1.5
+          }dmg`;
+          hpPlayer1HTML.innerHTML = `HP: ${player1.HP}`;
+          player2.Stamina = 0;
+          staminaPlayer2HTML.innerHTML = `Stamina: ${player2.Stamina}%`;
+        } else {
+          player1.HP = player1.HP - player2.SkillAtk * 1.5;
+          dmgCausadoPeloP2HTML.innerHTML = `Turno ${turnoCount} Você causou ${
+            player2.SkillAtk * 1.5
+          }dmg`;
+          hpPlayer1HTML.innerHTML = `HP: ${player1.HP}`;
+          dmgRecebidoPeloP1HTML.innerHTML = `Turno ${turnoCount} Você sofreu ${
+            player2.SkillAtk * 1.5
+          }dmg`;
+
+          player2.Stamina = 0;
+
+          staminaPlayer2HTML.innerHTML = `Stamina: ${player2.Stamina}%`;
+        }
+      } else {
+        alert(`Player2 acertou skill ATK`);
+
+        if (
+          (player2.ID == "fire" && player1.ID == "ice") ||
+          (player2.ID == "aqua" && player1.ID == "fire") ||
+          (player2.ID == "ice" && player1.ID == "aqua")
+        ) {
+          player1.HP =
+            player1.HP - (player2.SkillAtk + player2.SkillAtk * 0.05);
+          dmgCausadoPeloP2HTML.innerHTML = `Turno ${turnoCount} Você causou ${
+            player2.SkillAtk + player2.SkillAtk * 0.05
+          }dmg`;
+          dmgRecebidoPeloP1HTML.innerHTML = `Turno ${turnoCount} Você sofreu ${
+            player2.SkillAtk + player2.SkillAtk * 0.05
+          }dmg`;
+          hpPlayer1HTML.innerHTML = `HP: ${player1.HP}`;
+          player2.Stamina = 0;
+          staminaPlayer2HTML.innerHTML = `Stamina: ${player2.Stamina}%`;
+        } else {
+          player1.HP = player1.HP - player2.SkillAtk;
+          dmgCausadoPeloP2HTML.innerHTML = `Turno ${turnoCount} Você causou ${player2.SkillAtk}dmg`;
+          hpPlayer1HTML.innerHTML = `HP: ${player1.HP}`;
+          dmgRecebidoPeloP1HTML.innerHTML = `Turno ${turnoCount} Você sofreu ${player2.SkillAtk}dmg`;
+
+          player2.Stamina = 0;
+
+          staminaPlayer2HTML.innerHTML = `Stamina: ${player2.Stamina}%`;
+        }
+      }
+      if (player1.HP <= 0) {
+        hpPlayer1HTML.innerHTML = `HP: 0`;
+
+        document
+          .querySelector(".battle-layout-buttons")
+          .style.setProperty("display", "none");
+        document
+          .querySelector(".end-layout-buttons")
+          .style.setProperty("display", "flex");
+
+        if (player1.ID == "fire") {
+          monsterFaceP2.style.setProperty(
+            "background-image",
+            "url(./assets/img/FireMonster/Fire-Monster-lost.png)"
+          );
+        } else if (player1.ID == "aqua") {
+          monsterFaceP2.style.setProperty(
+            "background-image",
+            "url(./assets/img/AquaMonster/Aqua-Monster-lost.png)"
+          );
+        } else {
+          monsterFaceP1.style.setProperty(
+            "background-image",
+            "url(./assets/img/IceMonster/Ice-Monster-lost.png)"
+          );
+        }
+      }
+    }
   }
+  turnPlayer2 = false;
+  turnPlayer1 = true;
+  turnoCount++;
 }
 
 function curarPlayer2() {
   if (turnPlayer2 == false) {
     alert(`Agora é a vez do Player1`);
     return 0;
+  }
+  if (player2.Stamina < 25) {
+    alert(
+      `É necessário 25% de Stamina para utilizar Cura, você tem ${player1.Stamina}, ganhe stamina acertando ataques neutros !`
+    );
+    return 0;
+  } else {
+    if (player2.ID == "fire") {
+      //altera a face do monster
+      monsterFaceP2.style.setProperty(
+        "background-image",
+        "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
+      );
+    } else if (player2.ID == "aqua") {
+      monsterFaceP2.style.setProperty(
+        "background-image",
+        "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
+      );
+    } else {
+      monsterFaceP2.style.setProperty(
+        "background-image",
+        "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
+      );
+    }
+
+    if (player2.ID == "fire") {
+      monsterFaceP2.style.setProperty(
+        "background-image",
+        "url(./assets/img/FireMonster/Fire-Monster-normal.png)"
+      );
+    } else if (player2.ID == "aqua") {
+      monsterFaceP2.style.setProperty(
+        "background-image",
+        "url(./assets/img/AquaMonster/Aqua-Monster-normal.png)"
+      );
+    } else {
+      monsterFaceP2.style.setProperty(
+        "background-image",
+        "url(./assets/img/IceMonster/Ice-Monster-normal.png)"
+      );
+    }
+
+    alert(`Player2 Curou ${player2.Cura}`);
+
+    player2.Stamina = player2.Stamina - 25;
+    staminaPlayer2HTML.innerHTML = `Stamina: ${player2.Stamina}%`;
+
+    curaP2HTML.innerHTML = `Turno ${turnoCount} Curou ${player2.Cura} de HP`;
+    curaP1HTML.innerHTML = `Turno ${turnoCount} Inimigo Curou ${player2.Cura} de HP`;
+    player2.HP = player2.HP + player2.Cura;
+    hpPlayer2HTML.innerHTML = `HP: ${player2.HP}`;
+
+    turnPlayer1 = true;
+    turnPlayer2 = false;
+    turnoCount++;
   }
 }
