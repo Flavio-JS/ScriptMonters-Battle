@@ -270,5 +270,6 @@ footer {
 
   .status-container {
     font-size: 20px;
+    color: var(--gray);
   }
 }
