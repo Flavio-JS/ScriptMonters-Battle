@@ -370,6 +370,11 @@ function morderPlayer1() {
         );
       }
 
+      if (player2.Stamina < 100) {
+        player2.Stamina = player2.Stamina + 25;
+      }
+      staminaPlayer2HTML.innerHTML = `Stamina: ${player2.Stamina}%`;
+
       alert(`Inimigo Esquivou`);
     } else {
       if (player2.ID == "fire") {
@@ -512,6 +517,11 @@ function skillPlayer1() {
       player1.Stamina = 0;
 
       staminaPlayer1HTML.innerHTML = `Stamina: ${player1.Stamina}%`;
+
+      if (player2.Stamina < 100) {
+        player2.Stamina = player2.Stamina + 25;
+      }
+      staminaPlayer2HTML.innerHTML = `Stamina: ${player2.Stamina}%`;
 
       alert(`Inimigo Esquivou`);
     } else {
@@ -745,6 +755,11 @@ function morderPlayer2() {
         );
       }
 
+      if (player1.Stamina < 100) {
+        player1.Stamina = player1.Stamina + 25;
+      }
+      staminaPlayer1HTML.innerHTML = `Stamina: ${player1.Stamina}%`;
+
       alert(`Inimigo Esquivou`);
     } else {
       if (player1.ID == "fire") {
@@ -886,6 +901,11 @@ function skillPlayer2() {
       player2.Stamina = 0;
 
       staminaPlayer2HTML.innerHTML = `Stamina: ${player2.Stamina}%`;
+
+      if (player1.Stamina < 100) {
+        player1.Stamina = player1.Stamina + 25;
+      }
+      staminaPlayer1HTML.innerHTML = `Stamina: ${player1.Stamina}%`;
 
       alert(`Inimigo Esquivou`);
     } else {
